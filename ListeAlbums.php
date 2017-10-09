@@ -68,5 +68,5 @@ catch(PDOException $e)
 	echo $e->getMessage ();
 	$monpdo=null;
 }
-    //test
+    //test coucou
  ?>
