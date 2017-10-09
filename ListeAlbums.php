@@ -1,9 +1,5 @@
 <?php 
-try
-{
-	include("Monpdo.php");
-	include("Album.class.php");
-	include("Artiste.class.php");
+	include("Entete.php");
 ?>
 
 <!DOCTYPE html>

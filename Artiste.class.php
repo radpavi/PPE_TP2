@@ -6,7 +6,7 @@ class Artist extends Entity
 	//constructeur parmètré
 	public function __construct($id=null, $nom=null)
 	{
-		:base($id,$nom)
+		parent::__construct($id,$nom);
 		if($id!=null && $nom!=null)
 		{
 			$this->lesAlbums=array();
@@ -55,7 +55,7 @@ class Artist extends Entity
 
 	public static function getAll()
 	{
-		$sql="select * from artiste ";
+		$sql="select * from artiste";
 		$req = MonPdo::getInstance()->query($sql);
 		$lesArts = $req->fetchAll(PDO:: FETCH_CLASS | PDO::FETCH_PROPS_LATE, "Artist");
 		return $lesArts;

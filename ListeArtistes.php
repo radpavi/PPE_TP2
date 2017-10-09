@@ -1,3 +1,8 @@
+<?php 
+	include("Entete.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,12 +19,11 @@
 	</body>
 </html>
 
+
+
 <?php 
 try
 {
-	include("Monpdo.php");
-	include("Artiste.class.php");
-
 //on affiche la liste d'artiste
 	$listeArts=Artist::getAll();
 	echo "<h1>La liste d'artistes</h1>
@@ -45,7 +49,7 @@ try
 }
 catch(PDOException $e)
 {
-	echo $e->getMessage ();
+	echo $e->getMessage();
 	$monpdo=null;
 }
- ?>
+?>

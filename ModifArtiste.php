@@ -1,8 +1,7 @@
 <?php 
 try
 {
-	include("Monpdo.php");
-	include("Artiste.class.php");
+	include("Entete.php");
 	$monpdo = MonPdo::getInstance();
 
 	//on récupére le nom saisi par l'internaut

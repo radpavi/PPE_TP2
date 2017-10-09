@@ -1,5 +1,5 @@
 <?php
-include("Entity.class.php");
+
 class Album extends Entity
 {
 	//champs
