@@ -20,10 +20,12 @@
         		<label for=artiste>Artiste : </label>
 
         		<SELECT name="artiste" id= "artiste" size="1">
-					<option>KK</option>
+        		<option>
+				<?php Artist::getAll(); ?>
+				</option>
 				</SELECT>
 				<br><br>
-        		<input type="submit" name="ok" value="Ajouter l'lbum"/>
+        		<input type="submit" name="ok" value="Ajouter l'Album"/>
 			</form>
 	</body>
 </html>
@@ -31,9 +33,6 @@
 <?php 
 try
 {
-	include("Monpdo.php");
-	include("Album.class.php");
-
 	//on affiche la liste d'albums
 	$listeAlbum=Album::getAll();
 	echo "<h1>La liste d'albums</h1>
