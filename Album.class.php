@@ -7,7 +7,8 @@ class Album extends Entity
 	private $genre;
 
 	//constructeur paramètré
-	public function __construct($id=null,$nom=null,$annee=null,$genre=null)
+	public function __construct($id=null,$nom=null,
+		$annee=null,$genre=null)
 	{ 
 		parent::__construct($id,$nom);
 		if($id!=null && $nom!=null)

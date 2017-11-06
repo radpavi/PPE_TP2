@@ -9,6 +9,7 @@ try
 
 	//on ajoute des artistes
 	$req= Artist::AjouterArtist($nom);
+
 	//on affiche l'identifiant créé automatiquement
 	$id=$monpdo->lastInsertId();
 	echo "Identifiant: ".$id;
@@ -17,7 +18,7 @@ try
 		if($_GET['action']=="afficher")
 		{
 			$listeArts=Artist::getAll();
-			echo $$listeArts;
+			echo $listeArts;
 		}
 
 		if($_GET['action']=="supprimer")
@@ -25,7 +26,7 @@ try
 			$sup=Artist::SupprimerArtist($id);
 			if($sup==1)
 			{
-				
+				echo $sup;
 			}
 		}
 		echo "<a href=ListeArtistes.php>RETOUR</a>";

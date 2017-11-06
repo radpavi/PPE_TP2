@@ -2,9 +2,12 @@
 
 class Artist extends Entity
 {
+	//champs
 	private $lesAlbums;
+
 	//constructeur parmètré
-	public function __construct($id=null, $nom=null)
+	public function __construct($id=null, $nom=null, 
+		$lesAlbums=null)
 	{
 		parent::__construct($id,$nom);
 		if($id!=null && $nom!=null)
@@ -82,7 +85,8 @@ class Artist extends Entity
 	{
 		$art = "select * from artiste where id = ".$id;
 		$req = MonPdo::getInstance()->query($art);
-		$result = $req->fetchAll(PDO:: FETCH_CLASS, "Artist");
+		$result = $req->fetchAll(PDO:: FETCH_CLASS, 
+			"Artist");
 		return $result;
 	}
 
